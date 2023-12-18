@@ -1,0 +1,29 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1>Orders</h1>
+<p>
+
+</p>
+<p>  </p>
+    <ul>
+        {% if products_list %}
+        <ul>
+        {% for Products in products_list %}
+        <div class="card" style= "width: 18rem;">
+         <ul class="list-group list-group-flush">
+            <li class="list-group-item" > Product name: {{ Products.name }} </li>
+             <li class="list-group-item"> Product price: {{ Products.price }} </li>
+            <li class="list-group-item"> Product stock: {{ Products.stock }} </li>
+             <a>
+
+             </a>
+        </div>
+        {% endfor %}
+        </ul>
+        {% else %}
+            <p>Something gone wrong</p>
+        {% endif %}
+
+
+    </ul>
+{% endblock %}
